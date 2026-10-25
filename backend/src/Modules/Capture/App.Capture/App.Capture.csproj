@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../../Shared/App.Shared.csproj" />
+    <ProjectReference Include="../App.Capture.Contracts/App.Capture.Contracts.csproj" />
+    <ProjectReference Include="../../Processing/App.Processing.Contracts/App.Processing.Contracts.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/App/App.Api.csproj" />
+    <Project Path="src/Shared/App.Shared.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/">
+    <Project Path="src/Modules/Discovery/App.Discovery.Contracts/App.Discovery.Contracts.csproj" />
+    <Project Path="src/Modules/Discovery/App.Discovery/App.Discovery.csproj" />
+    <Project Path="src/Modules/Connections/App.Connections.Contracts/App.Connections.Contracts.csproj" />
+    <Project Path="src/Modules/Connections/App.Connections/App.Connections.csproj" />
+    <Project Path="src/Modules/Capture/App.Capture.Contracts/App.Capture.Contracts.csproj" />
+    <Project Path="src/Modules/Capture/App.Capture/App.Capture.csproj" />
+    <Project Path="src/Modules/Processing/App.Processing.Contracts/App.Processing.Contracts.csproj" />
+    <Project Path="src/Modules/Processing/App.Processing/App.Processing.csproj" />
+    <Project Path="src/Modules/Intelligence/App.Intelligence.Contracts/App.Intelligence.Contracts.csproj" />
+    <Project Path="src/Modules/Intelligence/App.Intelligence/App.Intelligence.csproj" />
+    <Project Path="src/Modules/Recommendations/App.Recommendations.Contracts/App.Recommendations.Contracts.csproj" />
+    <Project Path="src/Modules/Recommendations/App.Recommendations/App.Recommendations.csproj" />
+    <Project Path="src/Modules/Knowledge/App.Knowledge.Contracts/App.Knowledge.Contracts.csproj" />
+    <Project Path="src/Modules/Knowledge/App.Knowledge/App.Knowledge.csproj" />
+    <Project Path="src/Modules/Analytics/App.Analytics.Contracts/App.Analytics.Contracts.csproj" />
+    <Project Path="src/Modules/Analytics/App.Analytics/App.Analytics.csproj" />
+    <Project Path="src/Modules/Governance/App.Governance.Contracts/App.Governance.Contracts.csproj" />
+    <Project Path="src/Modules/Governance/App.Governance/App.Governance.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/App.IntegrationTests/App.IntegrationTests.csproj" />
+    <Project Path="tests/App.Tests/App.Tests.csproj" />
+  </Folder>
+</Solution>

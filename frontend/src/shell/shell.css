@@ -1,0 +1,110 @@
+/* The app shell (ui-standard §7): top bar, side navigation, main region. Mobile first: below 48rem
+   (768px) the navigation links collapse behind "Menu". */
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: -10rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-small);
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  min-height: var(--control-height);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.product-name {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+}
+
+.navigation {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.menu-button {
+  min-height: var(--control-height);
+  margin: var(--space-2) var(--space-4);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.navigation-links {
+  margin: 0;
+  padding: 0 0 var(--space-2);
+  list-style: none;
+}
+
+.navigation-links a {
+  display: flex;
+  align-items: center;
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navigation-links a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: inset 0.25rem 0 0 var(--color-primary);
+}
+
+.main-region {
+  padding: var(--space-6) var(--space-4);
+  min-width: 0;
+}
+
+.main-region h1 {
+  margin-top: 0;
+  font-size: var(--font-size-page-title);
+}
+
+.error-state h2 {
+  font-size: var(--font-size-extra-large);
+}
+
+@media (min-width: 48rem) {
+  .shell-body {
+    display: grid;
+    grid-template-columns: var(--navigation-width) 1fr;
+    min-height: calc(100vh - var(--control-height));
+  }
+
+  .navigation {
+    border-bottom: 0;
+    border-right: 1px solid var(--color-border);
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .navigation-links[hidden] {
+    display: block;
+  }
+
+  .navigation-links {
+    padding-top: var(--space-4);
+  }
+
+  .main-region {
+    padding: var(--space-8);
+  }
+}

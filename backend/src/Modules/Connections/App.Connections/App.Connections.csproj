@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../../../Shared/App.Shared.csproj" />
+    <ProjectReference Include="../App.Connections.Contracts/App.Connections.Contracts.csproj" />
+    <ProjectReference Include="../../Capture/App.Capture.Contracts/App.Capture.Contracts.csproj" />
+  </ItemGroup>
+</Project>

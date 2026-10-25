@@ -1,0 +1,112 @@
+/* The design tokens (ui-standard §5). Components use these, never raw colours or sizes.
+   Light and dark follow the operating system; data-theme="light|dark" on <html> overrides it.
+   Each text colour meets 4.5:1 on background and surface in its theme. */
+:root,
+:root[data-theme="light"] {
+  --color-background: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-text: #1b1f24;
+  --color-muted-text: #57606a;
+  --color-border: #8c959f;
+  --color-primary: #0b5cad;
+  --color-on-primary: #ffffff;
+  --color-danger: #b42318;
+  --color-on-danger: #ffffff;
+  --color-success: #1a7f37;
+  --color-on-success: #ffffff;
+  --color-warning: #8a5300;
+  --color-on-warning: #ffffff;
+  --color-focus: #0b5cad;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #0d1117;
+    --color-surface: #161b22;
+    --color-text: #e6edf3;
+    --color-muted-text: #9da7b3;
+    --color-border: #6e7681;
+    --color-primary: #58a6ff;
+    --color-on-primary: #0d1117;
+    --color-danger: #ff7b72;
+    --color-on-danger: #0d1117;
+    --color-success: #3fb950;
+    --color-on-success: #0d1117;
+    --color-warning: #d29922;
+    --color-on-warning: #0d1117;
+    --color-focus: #58a6ff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-background: #0d1117;
+  --color-surface: #161b22;
+  --color-text: #e6edf3;
+  --color-muted-text: #9da7b3;
+  --color-border: #6e7681;
+  --color-primary: #58a6ff;
+  --color-on-primary: #0d1117;
+  --color-danger: #ff7b72;
+  --color-on-danger: #0d1117;
+  --color-success: #3fb950;
+  --color-on-success: #0d1117;
+  --color-warning: #d29922;
+  --color-on-warning: #0d1117;
+  --color-focus: #58a6ff;
+  color-scheme: dark;
+}
+
+:root {
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-extra-large: 1.5rem;
+  --font-size-page-title: 2rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --radius-small: 0.25rem;
+  --radius-medium: 0.5rem;
+
+  --control-height: 2.5rem;
+  --navigation-width: 15rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+:focus-visible {
+  outline: 0.125rem solid var(--color-focus);
+  outline-offset: 0.125rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.button-primary {
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-small);
+  font: inherit;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  cursor: pointer;
+}

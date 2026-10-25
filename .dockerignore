@@ -1,0 +1,9 @@
+# Only the sources the image builds from; nothing local, generated or secret.
+.git
+.factory
+.claude
+**/node_modules
+**/bin
+**/obj
+**/dist
+**/.env*

@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../../../Shared/App.Shared.csproj" />
+    <ProjectReference Include="../App.Recommendations.Contracts/App.Recommendations.Contracts.csproj" />
+  </ItemGroup>
+</Project>
